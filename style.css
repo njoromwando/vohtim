@@ -1,0 +1,413 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #008080; /* Teal */
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure the body takes at least the full viewport height */
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  h1, h2, h3 {
+    color: #008080; /* Teal */
+  }
+  
+  a {
+    text-decoration: none;
+    color: #008080;
+  }
+  
+  .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #FF6F61; /* Coral */
+    color: white;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn:hover {
+    background-color: #e65a50;
+  }
+  
+ /* Header */
+header {
+    background-color: #008080; /* Teal */
+    padding: 10px 0; /* Reduced height */
+    color: white;
+  }
+  
+  header .container {
+    display: flex;
+    justify-content: space-between; /* Space between logo and nav */
+    align-items: center; /* Vertically center items */
+  }
+  
+  /* Logo Styling */
+  .logo {
+    display: flex;
+    align-items: center; /* Vertically center logo and text */
+    gap: 10px; /* Space between logo and text */
+  }
+  
+  .logo img {
+    width: 50px; /* Adjust logo size */
+    height: 50px;
+  }
+  
+  .logo h1 {
+    margin: 0;
+    font-size: 1.8rem; /* Smaller font size */
+  }
+  
+  /* Navigation Menu Styling */
+  nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 20px; /* Space between menu items */
+  }
+  
+  nav ul li a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none; /* Remove underline */
+  }
+  
+  nav ul li a:hover {
+    color: #FF6F61; /* Coral color on hover */
+  }
+  
+  /* Hamburger Menu Icon */
+  .menu-icon {
+    display: none; /* Hidden by default */
+    cursor: pointer;
+  }
+  
+  .menu-icon div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px 0;
+    transition: 0.4s; /* Smooth transition for animation */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    /* Hide the regular menu */
+    nav ul {
+      display: none;
+      flex-direction: column; /* Stack menu items vertically */
+      gap: 10px;
+      background-color: #008080; /* Teal background */
+      position: absolute;
+      top: 60px; /* Adjust based on header height */
+      right: 0;
+      width: 200px;
+      padding: 20px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+  
+    /* Show the menu when active */
+    nav ul.active {
+      display: flex;
+    }
+  
+    /* Show the hamburger menu icon */
+    .menu-icon {
+      display: block;
+    }
+  
+    /* Hamburger menu animation */
+    .menu-icon.active div:nth-child(1) {
+      transform: rotate(-45deg) translate(-5px, 6px);
+    }
+  
+    .menu-icon.active div:nth-child(2) {
+      opacity: 0;
+    }
+  
+    .menu-icon.active div:nth-child(3) {
+      transform: rotate(45deg) translate(-5px, -6px);
+    }
+  }
+ 
+  /* Main Content */
+  main {
+    flex: 1; /* Allow main content to grow and push footer to the bottom */
+  }
+  
+  /* Hero Section */
+  .hero {
+    background-color: #E6E6FA; /* Lavender */
+    padding: 80px 0; /* Adjusted padding */
+    text-align: center;
+  }
+  
+  .hero h2 {
+    font-size: 2.2rem; /* Smaller font size */
+    margin-bottom: 10px;
+  }
+  
+  .hero p {
+    font-size: 1.1rem; /* Smaller font size */
+    margin-bottom: 20px;
+  }
+  
+  /* Services Section */
+  .services {
+    padding: 40px 0; /* Adjusted padding */
+    background-color: white;
+  }
+  
+  .services h2 {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .service-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .service-item {
+    background-color: #F5F5F5; /* Light Gray */
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    flex: 1 1 calc(33.333% - 40px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Doctors Section */
+  .doctors {
+    padding: 40px 0; /* Adjusted padding */
+    background-color: #E6E6FA; /* Lavender */
+  }
+  
+  .doctors h2 {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .doctor-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .doctor-item {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    flex: 1 1 calc(33.333% - 40px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .doctor-item img {
+    border-radius: 50%;
+    margin-bottom: 10px;
+  }
+  
+  /* Contact Section */
+  /* Contact Section */
+.contact {
+    padding: 60px 0;
+    background-color: white;
+  }
+  
+  .contact h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #008080; /* Teal */
+  }
+  
+  .contact-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+  
+  .contact-info {
+    flex: 1 1 50%;
+    background-color: #F5F5F5; /* Light Gray */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .contact-info h3 {
+    color: #008080; /* Teal */
+    margin-bottom: 20px;
+  }
+  
+  .contact-info ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .contact-info ul li {
+    margin-bottom: 10px;
+    font-size: 1rem;
+  }
+  
+  .contact-info ul li strong {
+    color: #008080; /* Teal */
+  }
+  
+  .social-links {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+  }
+  
+  .social-links a {
+    color: #008080; /* Teal */
+    font-weight: bold;
+    text-decoration: underline;
+  }
+  
+  .social-links a:hover {
+    color: #FF6F61; /* Coral */
+  }
+  
+  .contact-map {
+    flex: 1 1 50%;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .contact-content {
+      flex-direction: column;
+    }
+  
+    .contact-info, .contact-map {
+      flex: 1 1 100%;
+    }
+  }
+  
+  
+  /* Footer */
+  footer {
+    background-color: #008080; /* Teal */
+    color: white;
+    text-align: center;
+    padding: 10px 0; /* Reduced height */
+    margin-top: auto; /* Push footer to the bottom */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .service-item, .doctor-item {
+      flex: 1 1 100%;
+    }
+  
+    nav ul {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  
+    /* Gallery Section */
+    .gallery {
+        padding: 60px 0;
+        background-color: #F5F5F5; /* Light Gray */
+      }
+    
+      .gallery h2 {
+        text-align: center;
+        margin-bottom: 40px;
+        color: #008080; /* Teal */
+      }
+    
+      .gallery-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Two main columns */
+        grid-template-rows: repeat(3, auto); /* Three rows */
+        gap: 15px; /* Space between images */
+        max-width: 1200px; /* Limit gallery width */
+        margin: 0 auto; /* Center the gallery */
+      }
+    
+      .gallery-item {
+        border-radius: 10px; /* Rounded corners */
+        overflow: hidden; /* Ensure images fit within rounded corners */
+        position: relative;
+      }
+    
+      .gallery-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Ensure images cover the area */
+        transition: transform 0.3s ease; /* Smooth hover effect */
+      }
+    
+      .gallery-item img:hover {
+        transform: scale(1.05); /* Zoom effect on hover */
+      }
+    
+      /* Big Image on the Left */
+      .gallery-item.big {
+        grid-column: 1 / 2; /* Left column */
+        grid-row: 1 / 4; /* Spans all three rows */
+      }
+    
+      /* Top Right: 2 Medium Images */
+      .gallery-item.medium:nth-child(2) {
+        grid-column: 2 / 3; /* Right column */
+        grid-row: 1 / 2; /* First row */
+      }
+    
+      .gallery-item.medium:nth-child(3) {
+        grid-column: 2 / 3; /* Right column */
+        grid-row: 2 / 3; /* Second row */
+      }
+    
+      /* Bottom Right: 3 Small Images */
+      .gallery-item.small {
+        grid-column: 2 / 3; /* Right column */
+        grid-row: 3 / 4; /* Third row */
+      }
+    
+      .gallery-item.small:nth-child(4) {
+        grid-column: 2 / 3; /* Right column */
+      }
+    
+      .gallery-item.small:nth-child(5) {
+        grid-column: 2 / 3; /* Right column */
+      }
+    
+      .gallery-item.small:nth-child(6) {
+        grid-column: 2 / 3; /* Right column */
+      }
+    
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        .gallery-grid {
+          grid-template-columns: 1fr; /* Single column on small screens */
+          grid-template-rows: auto; /* Auto rows */
+        }
+    
+        .gallery-item.big,
+        .gallery-item.medium,
+        .gallery-item.small {
+          grid-column: 1 / -1; /* Span all columns */
+          grid-row: auto; /* Auto rows */
+        }
+      }
